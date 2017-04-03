@@ -3,8 +3,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="mundo" class = "com.java.beans.Mundo">
+<!-- <bean id="mundo" class = "com.java.beans.Mundo">
 	<property name="saludo" value="Hola Mundo"></property>
+</bean> -->
+
+<!-- Represent person class and its attributes -->
+<bean id="person" class="com.java.beans.Person">
+	<constructor-arg type="int" value="1"></constructor-arg>
+	<constructor-arg type="String" value="Hector"></constructor-arg>
+	<constructor-arg type="String" value="Miguel991"></constructor-arg>
+	
 </bean>
 
 </beans>
