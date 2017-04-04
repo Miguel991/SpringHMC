@@ -7,8 +7,7 @@ public class Person {
 	private int id;
 	private String name;
 	private String nickname;
-	private List<Country> countrys;
-	
+	private Country country;
 	
 	public Person(int id, String name, String nickname) {
 		this.id = id;
@@ -33,11 +32,11 @@ public class Person {
 	}
 
 
-	public List<Country> getCountrys() {
-		return countrys;
+	public Country getCountry() {
+		return country;
 	}
-	public void setCountrys(List<Country> country) {
-		this.countrys = country;
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 	public void setId(int id) {
 		this.id = id;

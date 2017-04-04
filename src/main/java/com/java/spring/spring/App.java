@@ -14,13 +14,11 @@ public class App
     
    ApplicationContext app = new ClassPathXmlApplicationContext("com/java/xml/beans.xml");
     
-   Person people = (Person)app.getBean("PersonTag2");
+   Person people = (Person)app.getBean("person");
    
-   String nameCity;
+   System.out.println("The name of person is: "+ people.getName());
    
-   for(Country country: people.getCountrys()){
-	   System.out.println(country.getName());
-   }
+ 
    
     	
     	
