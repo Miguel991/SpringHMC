@@ -13,7 +13,7 @@ public class App
     
    ApplicationContext app = new ClassPathXmlApplicationContext("com/java/xml/beans.xml");
     
-   Person people = (Person)app.getBean("person");
+   Person people = (Person)app.getBean("PersonTag2");
    
    System.out.println("the name of person is: " + people.getName()+
 		   " From "+ people.getCountry().getName());

@@ -12,7 +12,7 @@
 		<constructor-arg type="String" value="Miguel991"></constructor-arg> </bean> -->
 
 
-	<bean id="person" class="com.java.beans.Person">
+	<bean id="person" class="com.java.beans.Person" name="PersonTag2">
 		<property name="country">
 			<bean id="country" class="com.java.beans.Country">
 				<property name="name" value="Argentina"></property>
@@ -22,6 +22,8 @@
 		<property name="name" value="Hector"></property>
 		<property name="nickname" value="Miguel991"></property>
 	</bean>
+	
+	<alias name="person" alias="personBean"/>
 
 
 
