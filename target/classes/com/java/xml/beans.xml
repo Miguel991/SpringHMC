@@ -13,15 +13,17 @@
 
 
 	<bean id="person" class="com.java.beans.Person">
-		<property name="country" ref="country"></property>
+		<property name="country">
+			<bean id="country" class="com.java.beans.Country">
+				<property name="name" value="Argentina"></property>
+			</bean>
+		</property>
 		<property name="id" value="1"></property>
 		<property name="name" value="Hector"></property>
 		<property name="nickname" value="Miguel991"></property>
 	</bean>
-	
 
-	<bean id="country" class="com.java.beans.Country">
-		<property name="name" value="Argentina"></property>
-	</bean>
+
+
 
 </beans>
