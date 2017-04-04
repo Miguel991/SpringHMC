@@ -5,6 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.java.beans.Country;
 import com.java.beans.Person;
 
 public class App 
@@ -15,8 +16,12 @@ public class App
     
    Person people = (Person)app.getBean("PersonTag2");
    
-   System.out.println("the name of person is: " + people.getName()+
-		   " From "+ people.getCountry().getName());
+   String nameCity;
+   
+   for(Country country: people.getCountrys()){
+	   System.out.println(country.getName());
+   }
+   
     	
     	
     ((ConfigurableApplicationContext)app).close();

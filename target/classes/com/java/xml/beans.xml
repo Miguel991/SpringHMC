@@ -13,15 +13,27 @@
 
 
 	<bean id="person" class="com.java.beans.Person" name="PersonTag2">
-		<property name="country">
-			<bean id="country" class="com.java.beans.Country">
-				<property name="name" value="Argentina"></property>
-			</bean>
+		<property name="countrys">
+		<list>
+			<ref bean="countryOne"/>
+			<ref bean="countryTwo"/>
+			<ref bean="countryThree"/>
+		</list>
 		</property>
 		<property name="id" value="1"></property>
 		<property name="name" value="Hector"></property>
 		<property name="nickname" value="Miguel991"></property>
 	</bean>
+	
+	<bean id="countryOne" class="com.java.beans.Country">
+				<property name="name" value="Argentina"></property>
+			</bean>
+	<bean id="countryTwo" class="com.java.beans.Country">
+				<property name="name" value="Paraguay"></property>
+			</bean>
+	<bean id="countryThree" class="com.java.beans.Country">
+				<property name="name" value="Brasil"></property>
+			</bean>
 	
 	<alias name="person" alias="personBean"/>
 
