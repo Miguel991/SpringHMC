@@ -3,16 +3,25 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!-- <bean id="mundo" class = "com.java.beans.Mundo">
-	<property name="saludo" value="Hola Mundo"></property>
-</bean> -->
+	<!-- <bean id="mundo" class = "com.java.beans.Mundo"> <property name="saludo" 
+		value="Hola Mundo"></property> </bean> -->
 
-<!-- Represent person class and its attributes -->
-<bean id="person" class="com.java.beans.Person">
-	<constructor-arg type="int" value="1"></constructor-arg>
-	<constructor-arg type="String" value="Hector"></constructor-arg>
-	<constructor-arg type="String" value="Miguel991"></constructor-arg>
+	<!-- Represent person class and its attributes -->
+	<!-- <bean id="person" class="com.java.beans.Person"> <constructor-arg type="int" 
+		value="1"></constructor-arg> <constructor-arg type="String" value="Hector"></constructor-arg> 
+		<constructor-arg type="String" value="Miguel991"></constructor-arg> </bean> -->
+
+
+	<bean id="person" class="com.java.beans.Person">
+		<property name="country" ref="country"></property>
+		<property name="id" value="1"></property>
+		<property name="name" value="Hector"></property>
+		<property name="nickname" value="Miguel991"></property>
+	</bean>
 	
-</bean>
+
+	<bean id="country" class="com.java.beans.Country">
+		<property name="name" value="Argentina"></property>
+	</bean>
 
 </beans>

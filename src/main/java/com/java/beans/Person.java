@@ -5,23 +5,16 @@ public class Person {
 	private int id;
 	private String name;
 	private String nickname;
+	private Country country;
 	
 	
 	public Person(int id, String name, String nickname) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.nickname = nickname;
 	}
+	public Person (){}
 	
-	public Person(int id){
-		this.id = id;
-		
-	}
-	
-	public Person (String nickname){
-		this.nickname = nickname;
-	}
 
 	public int getId() {
 		return id;
@@ -35,6 +28,31 @@ public class Person {
 
 	public String getNickname() {
 		return nickname;
+	}
+
+
+	public Country getCountry() {
+		return country;
+	}
+
+
+	public void setCountry(Country country) {
+		this.country = country;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	
 	

@@ -15,7 +15,8 @@ public class App
     
    Person people = (Person)app.getBean("person");
    
-   System.out.println("the name of person is: " + people.getName() );
+   System.out.println("the name of person is: " + people.getName()+
+		   " From "+ people.getCountry().getName());
     	
     	
     ((ConfigurableApplicationContext)app).close();
